@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Pacifico|Open+Sans|Rubik+Mono+One');
+.developer_name_style{font-family: 'Pacifico', sans-serif;}
+.developer_name_style > a{font-family: 'Great Vibes', sans-serif;}
+.main-footer > strong > a{font-family: 'Pacifico', sans-serif;}
+.body_font_style p{
+	font-size: 17px;
+	line-height: 30px;
+	word-wrap: break-word;
+	font-family: 'kiron',SolaimanLipi,Arial,Vrinda,FallbackBengaliFont,Helvetica,sans-serif !important;
+}
+
+.margirn_style_text p{
+	padding-left: 50px;
+	padding-right: 45px;
+	font-family: 'kiron',SolaimanLipi,Arial,Vrinda,FallbackBengaliFont,Helvetica,sans-serif !important;
+	font-size: 18px;
+	line-height: 30px;
+	margin-bottom: 16px;
+	word-wrap: break-word;
+	word-spacing: 8px;
+}
+
+.margirn_style_text ul {
+	background: #EAF1FB;
+    margin-left: 45px;
+    border-bottom: 2px solid #D083CF;
+    border-top: 2px solid #D083CF;
+    margin-right: 45px;
+}
+
+.margirn_style_text ul li{
+	font-size: 20px;
+	line-height: 32px;
+	word-wrap: break-word;
+	word-spacing: 5px;
+}
+
+.news_title_font_style{
+	font-size: 17px;
+	line-height: 30px;
+	font-family: 'kiron',SolaimanLipi,Arial,Vrinda,FallbackBengaliFont,Helvetica,sans-serif !important;
+}
+
+.news_sticker{}
+.news_sticker li{}
+.news_sticker li a{font-size: 14px;line-height: 18px;font-family: 'kiron',SolaimanLipi,Arial,Vrinda,FallbackBengaliFont,Helvetica,sans-serif !important;}
+.comment_box_style{
+  width: 90%;
+  margin:0 auto;
+}
+.comment_submit_style{
+	margin-top: 6px;
+	margin-bottom: 6px;
+	margin-right: 50px;
+	border-radius: 5%;
+}
+
+h4.media-heading{color: #000;}
+
+.commented_profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 8px;
+}
+.comment_box_login_registion{
+	min-height: 100px;
+	text-align: center;
+	text-shadow: 1px #ddd;
+	text-rendering: 2px;
+	text-orientation: 8px;
+}
+
+.comment_box_login_registion h4 a{
+	font-family: 'kiron',SolaimanLipi,Arial,Vrinda,FallbackBengaliFont,Helvetica,sans-serif !important;
+	border-radius: 5px;
+}
+
+.register-box {
+	width: 440px;
+    margin: 0% auto;
+}
+
+.login-box-msg{padding-top: 0px;padding-bottom: 0px;margin-top: 0px;margin-bottom: 0px;}
+h3.termsandconditaions_title_style {
+	font-family: 'kiron',SolaimanLipi,Arial,Vrinda,FallbackBengaliFont,Helvetica,sans-serif !important;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	font-weight: inherit;
+	font-style: italic;
+	text-shadow: 2px 2px #fff;
+	padding-left: 8px;
+}
+.terms_condations_details{}
+.terms_condations_details p {
+	font-family: 'kiron',SolaimanLipi,Arial,Vrinda,FallbackBengaliFont,Helvetica,sans-serif !important;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 5px 15px;
+	text-shadow: none;
+	font-weight: initial;
+	word-wrap: break-word;
+	word-spacing: 8px;
+}
+
+.terms_condations_details ul{
+	background: #EFEFEF;
+    margin-left: 45px;
+    border-top: 2px solid #AAAAAA;
+    border-bottom: 2px solid #AAAAAA;
+    margin-right: 45px;
+    list-style-type: square;
+}
+.terms_condations_details ul li{
+	font-family: 'kiron',SolaimanLipi,Arial,Vrinda,FallbackBengaliFont,Helvetica,sans-serif !important;
+	font-size: 17px;
+	line-height: 30px;
+	padding: 5px 15px;
+	text-shadow: none;
+	font-weight: bold;
+	word-wrap: break-word;
+	word-spacing: 6px;
+}
+
+/* 26-05-2018 Today is start in All bangla News Paper Style */
+.most_populer_newss{border: 1px solid #ddd;padding: 5px 7px;}
+.most_populer_newss ul{}
+.most_populer_newss ul li{
+	list-style-type: none;
+    display: inline-table;
+    border: 1px solid #E7E9EA;
+    padding: 5px;
+    margin: 0 7px 20px 0;
+}
+.most_populer_newss ul li a{padding:3px 4px;background: #fff;border: 1px solid #ddd;display: block;border-bottom: 1px solid #ddd !important;}
+.most_populer_newss img{width: 133px;height: 45px;}
+.most_populer_newss p{font-size: 16px;padding-top: 4px;border-top: 1px solid #ddd;text-align: center;margin-bottom: 2px;color: #000;}
+/*12-07-2018 Tech Group *** allnewsbangla.com */
+.bn_newspaper > ul{width: 100%;}
+.bn_newspaper > ul > li {
+	width: 18%;
+	display: inline-block;
+	float: left;
+	border: 1px solid #ddd;
+	margin-bottom: 20px;
+	margin-right: 17px;
+}
+
+.bn_newspaper > ul > li > a{border-bottom: 1px solid #ddd;}
+.bn_newspaper > ul > li > a > .newspaper_image {
+	width: 94%;
+	height: 50px;
+	margin: 5px;
+	padding: 3px;
+	border: 1px solid #ddd;
+	margin-right: 3px;
+}
+.bn_newspaper > ul > li > a > p{text-align: center;color: green;font-size: 17px;font-style: normal;}
+.bangla_radio{border: 1px solid #ddd;padding: 5px 7px;}
+.bangla_radio ul{}
+.bangla_radio ul li{
+	list-style-type: none;
+    display: inline-table;
+    border: 1px solid #E7E9EA;
+    padding: 5px;
+    width: 160px;
+    max-height: 120px;
+    margin: 0 7px 20px 0;
+}
+.bangla_radio ul li a{padding:3px 4px;background: #fff;border: 1px solid #ddd;display: block;border-bottom: 1px solid #ddd !important;}
+.bangla_radio img{width: 100%;height: 100px;}
+.bangla_radio p{font-size: 16px;padding-top: 4px;border-top: 1px solid #ddd;text-align: center;margin-bottom: 2px;color: #000;}
+.total-zila-in-bangladesh{border: 1px solid #ddd; padding: 5px 7px;}
+.total-zila-in-bangladesh ul{}
+.total-zila-in-bangladesh ul li{list-style: none;display: inline-table;border: 1px solid #ddd;padding: 5px;margin: 0 7px 20px 0;}
+.total-zila-in-bangladesh ul li a{padding: 3px 4px; border: 1px solid #ddd;color: #000;font-size: 17px;line-height: 25px;font-weight: bold;text-align: center;}
+.total-zila-in-bangladesh ul li:hover{background: #d083cf;opacity: 0.7;}
+
+.backbuttomstyle{border-radius: 5px;padding-right: 5px;margin-right: 130px;margin-top: 5px;background: #AAAAAA;}
+.live-radio-s{border: 1px solid #ddd;}
+.radio-live-audio{width: 300px;}
+.liveRadioLogo{width: 80%;height: auto;}
+.bangla_tv{}
+.bangla_tv ul{
+	width: 100%;
+	float: left;
+	position: relative;
+	}
+.bangla_tv ul li{
+    
+   }
+.bangla_tv ul li a{
+	width: 20%;
+    float: left;
+    padding: 1% 5px 0 5px;
+    border-bottom: solid 1px #ededed;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+.bangla_tv ul li a img{
+	width: 100%;
+	float: left;
+	position: relative;
+	border: solid 1px #ededed;
+	padding: 3% 3% 3% 3%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,.2);
+	overflow: hidden;
+   }
+.bangla_tv ul li a p{text-align: center;}
+.world-bangla li{width: 40%;}
+.world-bangla li a{letter-spacing: 2px;}
+.overridestyle > .banglanewspapertabs > li > a{
+	color: #fff;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: bold;
+	border-right: 1px solid #fff;
+}
+.overridestyle > .banglanewspapertabs > li:last-child a{border-right: 0px solid #fff;}
+.overridestyle > .banglatvtabs > li > a{
+	color: #fff;
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: bold;
+	border-right: 1px solid #fff;
+}
+.overridestyle > .banglatvtabs > li:last-child a{border-right: 0px solid #fff;}
+.spost_nav_overide .media-left {
+    width: 72px;
+    height: 36px;
+}
+.bangla_communityd{min-height: 180px;}
+@media (max-width: 1340px){
+.bn_newspaper > ul > li {
+	margin-right: 15px;
+ }	
+}
+@media(max-width: 1300px){
+ .bn_newspaper > ul > li {
+	width: 31%;
+	margin-right: 17px;
+ }
+ .overridestyle > .banglatvtabs > li > a{
+	font-size: 19px;
+	line-height: 26px;
+ }
+}
+@media (max-width: 1200px){
+.bn_newspaper > ul > li {
+	width: 30%;
+	margin-right: 17px;
+ }
+ .overridestyle > .banglanewspapertabs > li > a{
+	font-size: 18px;
+	line-height: 22px;
+ }
+ .overridestyle > .banglatvtabs > li > a{
+	font-size: 16px;
+	line-height: 22px;
+ }
+}
+@media (max-width: 1100px){
+  .bn_newspaper > ul > li {
+	width: 30%;
+	margin-right: 16px;
+ }
+  .overridestyle > .banglanewspapertabs > li > a{
+	font-size: 16px;
+	line-height: 22px;
+ }
+ .overridestyle > .banglatvtabs > li > a{
+	font-size: 20px;
+ }
+}
+@media (max-width: 1000px){
+ .bn_newspaper > ul > li {
+	width: 28%;
+	margin-right: 17px;
+ }
+}
+@media (max-width: 990px){
+ .bn_newspaper > ul > li {
+	width: 23%;
+	margin-right: 17px;
+ }
+ .overridestyle > .banglanewspapertabs > li > a{
+	font-size: 20px;
+	line-height: 28px;
+ }
+ .bangla_communityd{min-height: 195px;}
+}
+@media (max-width: 900px){
+ .bn_newspaper > ul > li {
+	width: 22%;
+	margin-right: 17px;
+ }
+ .bangla_communityd{min-height: 250px;}
+}
+@media(max-width: 767px){
+.bangla_communityd{min-height: 180px;}
+}
+@media (max-width: 730px){
+ .banglatvupimg{margin-left: 32%;margin-right: 0px;}
+ .digital_clock{margin-right: 18%;margin-bottom: 15px;}
+}
+@media (max-width: 700px){
+ .bn_newspaper > ul > li {
+	width: 30%;
+	margin-right: 17px;
+ }
+ .banglatvupimg{margin-left: 28%;margin-right: 0px;}
+ .digital_clock{margin-right: 18%;margin-bottom: 15px;padding-right: 0px;}
+}
+@media (max-width: 585px){
+ .bn_newspaper > ul > li {
+	width: 30%;
+	margin-right: 12px;
+ }
+ .overridestyle > .banglanewspapertabs > li > a{
+	font-size: 26px;
+	vertical-align: center;
+ }
+ .banglatvupimg{margin-left: 20%;margin-right: 0px;}
+ .digital_clock{margin-right: 10%;margin-bottom: 15px;padding-right: 0px;}
+}
+@media (max-width: 500px){
+  .bn_newspaper > ul > li {
+	width: 45%;
+	margin-right: 15px;
+ }
+ .overridestyle > .banglanewspapertabs > li{
+ 	width: 100%;
+ 	border-bottom:1px solid #fff;
+ }
+ .overridestyle > .banglanewspapertabs > li > a{
+	font-size: 20px;
+	line-height: 28px;
+ }
+ .banglatvupimg{margin-left: 15%;margin-right: 0px;}
+ .digital_clock{margin-right: 3%;margin-bottom: 15px;padding-right: 0px;}
+ .bangla_communityd{min-height: auto;}
+}
+
+/*12-07-2018 END*/
+
+@media(max-width:460px ){
+
+.register-box {
+    width: 360px;
+}
+.overridestyle ul li{width: 100%;}
+.overridestyle ul li a{border-bottom: 1px solid #fff;}
+.most_populer_newss > img{width: 100%;height: auto;}
+.bangla_radio img{width: 100%;height: auto;}
+.bn_newspaper > ul > li {
+	width: 45%;
+	margin-right: 15px;
+ }
+ .banglatvupimg{margin-left: 0%;margin-right: 0%}
+ .digital_clock{margin-right: 0%;margin-bottom: 15px;padding-right: 0px;}
+ .bangla_communityd{min-height: 220px;}
+}
+@media(max-width: 395px){.bangla_communityd{min-width:100%;min-height: auto;}}
+
+@media(max-width:360px){
+.margirn_style_text p{
+padding-left: 20px;
+padding-right: 20px;
+}
+ .register-box {
+    width: 340px;
+}
+.radio-live-audio{width: 100%;}
+.liveRadioLogo{width: 100%;}
+.bn_newspaper > ul > li {
+	width: 100%;
+ }
+ .bn_newspaper > ul > li > a > .newspaper_image {
+	height: 65px;
+ }
+}
+@media(max-width:320px ){
+.margirn_style_text p{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.register-box {
+    width: 300px;
+    margin: 7% auto;
+}
+.margirn_style_text ul {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.bn_newspaper > ul > li > a > .newspaper_image {
+	height: 60px;
+ }
+
+}

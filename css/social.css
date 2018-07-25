@@ -1,0 +1,93 @@
+.navbar-nav > .user-menu > .dropdown-menu > .text_style_signin_body {
+background-color: #3c8dbc;
+}
+.text_style_signin{border: 1px solid #ddd;}
+.text_style_signin p{font-size: 16px;}
+.footer_aboutus h3 {
+ padding-left: 10px;
+}
+.footer_aboutus p {
+  font-size: 20px;
+  line-height: 33px;
+  word-wrap: break-word;
+  word-spacing: 4px;
+  font-weight: normal;
+  color: #0A0A0B;
+  text-align: justify;
+}
+.site_media {
+  padding: 15px;
+  font-size: 25px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+
+.site_media:hover {
+    opacity: 0.7;
+}
+
+.md-fb {
+  background: #3B5998;
+  color: white;
+}
+
+.md-tw {
+  background: #55ACEE;
+  color: white;
+}
+
+.md-gp {
+  background: #dd4b39;
+  color: white;
+}
+
+.md-lk {
+  background: #007bb5;
+  color: white;
+}
+
+.md-yt {
+  background: #bb0000;
+  color: white;
+}
+
+.md-ig {
+  background: #125688;
+  color: white;
+}
+
+.md-pr {
+  background: #cb2027;
+  color: white;
+}
+
+.socall_media ul li{display: inline-block;}
+.footer_services tr td a{font-size: 14px;}
+.footer_address{
+  font-size: 15px;line-height: 22px;word-spacing: 3px;
+}
+.audio_pdl{color:#fff;cursor: pointer;}
+
+@media only screen and (max-width: 600px) {
+  .list-group-item>.badge {
+   float: none; 
+  }
+  .content-header{display: none;}
+  .site_media {
+  padding: 12px;
+  font-size: 22px;
+  width: 40px;
+  margin: 3px 2px;
+ }
+}
+@media only screen and (max-width: 400px){
+ .site_media {
+  padding: 8px;
+  font-size: 14px;
+  width: 30px;
+  margin:2px;
+ }
+}
