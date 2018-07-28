@@ -242,6 +242,9 @@ h3.termsandconditaions_title_style {
     height: 36px;
 }
 .bangla_communityd{min-height: 180px;}
+input.ng-invalid.ng-touched{border: 1px solid #DA3637;}
+input.ng-valid.ng-touched{border: 1px solid #509D12;}
+.ng-invalid .btn{background: gray;}
 @media (max-width: 1340px){
 .bn_newspaper > ul > li {
 	margin-right: 15px;

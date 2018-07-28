@@ -194,7 +194,8 @@
   }
 </script>
 <!-- JavaScript Includes -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script> -->
+   <script src="js/moment.min.js"></script>
     <script src="js/digital-clock.js"></script>
 
 <script src="js/menu_script.js"></script>

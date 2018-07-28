@@ -27,7 +27,7 @@ header("Expires: Mon, 6 Dec 1977 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 ?>
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" ng-app>
 <head>
 <?php 
 include "script/title.php";
@@ -48,6 +48,8 @@ include "script/meta.php";
 <link rel="stylesheet" type="text/css" href="css/social.css">
 <link rel="stylesheet" type="text/css" href="css/menu_style.css">
 <link rel="stylesheet" type="text/css" href="css/page_text_style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
 <!--[if lt IE 9]>
 <script src="assets/js/html5shiv.min.js"></script>
 <script src="assets/js/respond.min.js"></script>
