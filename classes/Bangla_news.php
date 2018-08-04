@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * Bangla_news  This class use bangla district manage...
  */
@@ -18,15 +18,15 @@ class Bangla_news{
      	return $msg;
      }else{
      	$dis_con = $this->fm->validation($data['dis_con']);
-        $bd_div  = $this->fm->validation($data['bd_div']);
+      $bd_div  = $this->fm->validation($data['bd_div']);
      	$bn_cn   = $this->fm->validation($data['bn_cn']);
 
      	$dis_con = mysqli_real_escape_string($this->db->link, $dis_con);
-        $bd_div  = mysqli_real_escape_string($this->db->link, $bd_div);
+      $bd_div  = mysqli_real_escape_string($this->db->link, $bd_div);
      	$bn_cn   = mysqli_real_escape_string($this->db->link, $bn_cn);
         
-        $sqlCk   = "SELECT * FROM bd_ns_cat WHERE bn_cn = '$bn_cn' LIMIT 1";
-        $ckRst   = $this->db->select($sqlCk);
+      $sqlCk   = "SELECT * FROM bd_ns_cat WHERE bn_cn = '$bn_cn' LIMIT 1";
+      $ckRst   = $this->db->select($sqlCk);
      	if ($ckRst != false) {
      		$msg = '<div class="alert alert-danger">This Zila Already Exists !</div>';
      		return $msg;

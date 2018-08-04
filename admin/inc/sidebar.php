@@ -30,18 +30,6 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
-        <?php if (Session::get('level') == '0') { ?>
-        <li>
-          <a href="registration.php">
-            <i class="glyphicon glyphicon-user"></i> <span>User </span>
-          </a>
-        </li>
-        <?php } ?>
-        <li>
-          <a href="category.php">
-            <i class="glyphicon glyphicon-th-list"></i><span>Category</span>
-          </a>
-        </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-clipboard"></i>
@@ -53,6 +41,7 @@
           <ul class="treeview-menu">
             <li><a href="addpost.php"><i class="fa fa-plus-square"></i>Add Post</a></li>
             <li><a href="post_list.php"><i class="fa fa-th-list"></i>Post List</a></li>
+            <li><a href="category.php"><i class="glyphicon glyphicon-th-list"></i>Category</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -109,6 +98,25 @@
             <span class="pull-right-container"></span>
           </a>
         </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users"></i>
+            <span>Bangla Community</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        <ul class="treeview-menu">
+          <li>
+            <a href="bangladeshi-community.php"><i class="fa fa-plus-square"></i>Community Manage</a>
+          </li>
+          <li>
+            <a href="community-video.php"><i class="fa fa-video-camera"></i>Community Video</a>
+          </li><li>
+            <a href="community-slider.php"><i class="fa fa-sliders"></i>Community Slider</a>
+          </li>
+        </ul>
+        </li>
         <li>
           <a href="bangla-district.php">
             <i class="fa fa-th"></i>
@@ -152,6 +160,29 @@
             <i class="fa fa-edit"></i> <span>Site ETC</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green"><i class="fa fa-share-square"></i></small>
+            </span>
+          </a>
+        </li>
+        <?php if (Session::get('level') == '0') { ?>
+        <li>
+          <a href="registration.php">
+            <i class="glyphicon glyphicon-user"></i> <span>User </span>
+          </a>
+        </li>
+        <?php } ?>
+        <li>
+          <a href="mailbox.php">
+            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-yellow">12</small>
+              <small class="label pull-right bg-green"><?php 
+              $getInbox = $con_us->getInboxMessageSer();
+              if ($getInbox) {
+                $count = mysqli_num_rows($getInbox);
+                echo $count;
+              }else{ echo "0"; }
+            ?></small>
+              <small class="label pull-right bg-red">5</small>
             </span>
           </a>
         </li>
@@ -203,22 +234,6 @@
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>
               <small class="label pull-right bg-blue">17</small>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="mailbox.php">
-            <i class="fa fa-envelope"></i> <span>Mailbox</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
-              <small class="label pull-right bg-green"><?php 
-              $getInbox = $con_us->getInboxMessageSer();
-              if ($getInbox) {
-                $count = mysqli_num_rows($getInbox);
-                echo $count;
-              }else{ echo "0"; }
-            ?></small>
-              <small class="label pull-right bg-red">5</small>
             </span>
           </a>
         </li>

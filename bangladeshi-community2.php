@@ -2,6 +2,8 @@
 <?php
    include "classes/Community.php";
    $comm = new Community();
+   
+
 ?>
 <?php include "inc/header-top.php" ?>
 <?php /*include "inc/news_mq_s.php"*/ ?>
@@ -75,25 +77,10 @@
         <!--  Start -->
           <div class="row">
            <?php
-           #record per page show limit query start..
-            $getperPage = $comm->getCommunitySettingResult();
-            $perPage = $getperPage->fetch_assoc();
-            $recordPerPage = $perPage['record_per_page'];
-            #end
-            $record_per_page = $recordPerPage;
-            $getPagination = $comm->getPaginationResult();
-            $total_rows = mysqli_num_rows($getPagination);
-            $total_pages = ceil($total_rows/$record_per_page);
+            $record_per_page = 2;
              $page = '';
-             if (isset($_GET['page']) && !empty($_GET['page'])) {
-               $page = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['page']);
-               $page = mysqli_real_escape_string($db->link, $page);
-               $page = preg_replace('/\D/', '', $page);
-               if ($page > $total_pages) {
-                   $page = 1;
-                 }elseif ((int)$page != true) {
-                   $page = 1;
-                 }
+             if (isset($_GET['page'])) {
+               $page = $_GET['page'];
              }else{
               $page = 1;
              }
@@ -111,11 +98,8 @@
                   <tr><td><i class="fa fa-map-marker" style="color: red;" ></i> <?php echo $resultShow['com_location']; ?></td></tr>
                   <tr>
                     <td>
-                      <?php if ($resultShow['com_url'] != NULL) { ?>
-                      <a href="<?php echo $resultShow['com_url']; ?>" class="btn btn-theme"><i class="fas fa-globe"></i> Web</a>
-                      <?php } if ($resultShow['fb_url'] != NULL) { ?>
-                      <a href="<?php echo $resultShow['fb_url']; ?>" class="btn btn-theme"><i class="fab fa-facebook-f"></i> FB</a>
-                      <?php } ?>
+                      <a href="#" class="btn btn-theme"><i class="fas fa-globe"></i> Web</a>
+                      <a href="#" class="btn btn-theme"><i class="fab fa-facebook-f"></i> FB</a>
                     </td>
                   </tr>
                 </tbody>
@@ -124,48 +108,59 @@
             <?php } } ?>
         </div>
         <?php 
-          $start_loop = $page;
-          $difference = $total_pages - $page;
+        $getPagination = $comm->getPaginationResult();
+        if ($getPagination) {
+          $total_rows = mysqli_num_rows($getPagination);
+          if ($total_rows > 0) {
 
-            if ($total_pages > 1) {
-              if ($difference <= 5) {
-                $start_loop = $total_pages - 5;
-              }
-              $end_loop = $start_loop + 4;
+            $total_pages = ceil($total_rows/$record_per_page);
+            $start_loop = $page;
+            $difference = $total_pages - $page;
+            if ($difference <= 5) {
+              $start_loop = $total_pages - 5;
             }
-          ?>
-          <div class="row">
+            $end_loop = $start_loop + 4;
+
+            if ($total_pages < $page) {
+              echo '<script>window.location.href="bangladeshi-community.php"</script>';
+            }
+        ?>
+        <div class="row">
           <div class="col-lg-6 col-lg-offset-3">
             <nav aria-label="Page navigation example">
             <ul class="pagination">
-          <?php
-           if($page > 1)
-          {
-           echo "<li class='page-item'><a class='page-link'href='bangladeshi-community.php?page=1'>First</a></li>";
-           echo "<li class='page-item'><a class='page-link' href='bangladeshi-community.php?page=".($page - 1)."'><<</a></li>";
-          }
-          if ($total_pages > 1) {
-          $ac = 'active';
-          for($i = max(1, $start_loop); $i <= min($end_loop, $total_pages); $i++)
-          { 
-            if ($page==$i) {
-              $ac = 'active';
-            }else{
-              $ac = '';
-            }
-           echo "<li class='page-item ".$ac."'><a class='page-link' href='bangladeshi-community.php?page=".$i."'>".$i."</a></li>";
-          }
-          if($page <= $end_loop)
-          {
-           echo "<li class='page-item'><a class='page-link' href='bangladeshi-community.php?page=".($page + 1)."'>>></a></li>";
-           echo "<li class='page-item'><a class='page-link' href='bangladeshi-community.php?page=".$total_pages."'>Last</a></li>";
-          }
-         }
-         ?>
-        </ul>
-        </nav>
-      </div>
-      </div>
+              <?php
+               if ($page > 1) {
+              ?>
+              <li class="page-item <?php if($page = 1){ ?> disabled <?php } ?>">
+                <a class="page-link" href="bangladeshi-community.php?page=<?php echo $page - 1; ?>" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <?php } ?>
+              <!-- <li class="page-item active"><a class="page-link" href="#">1</a></li> -->
+              <?php
+                for ($i=$start_loop; $i<=$end_loop; $i++) { 
+              
+        echo "<li class=\"page-item\"><a class=\"page-link\" href=\"bangladeshi-community.php?page=$i\">$i</a></li>";
+               } ?>
+              
+             <?php 
+              if ($page <= $end_loop) {
+             ?>
+              <li class="page-item <?php if($page = $end_loop){ ?> disabled <?php } ?>">
+                <a class="page-link" href="bangladeshi-community.php?page=<?php echo $page + 1; ?>" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+              <?php } ?>
+            </ul>
+          </nav>
+          </div>
+        </div>
+        <?php } } ?>
          <!-- end -->
           <div class="single_post_content">
             <h2><span>Photography</span></h2>
@@ -215,19 +210,7 @@
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="video">
                 <div class="vide_area">
-                <?php 
-                   $getVideo = $comm->getVideoResult();
-                   if ($getVideo) {
-                     $vresult = $getVideo->fetch_assoc();
-                  
-                   if (!empty($vresult['com_yt_url']) || $vresult['com_yt_url'] != NULL) {
-                  ?>
-                 <iframe width="<?php echo $vresult['video_width']; ?>" height="<?php echo $vresult['video_height']; ?>" src="<?php echo $vresult['com_yt_url']; ?>" frameborder="0" 
-              <?php if ($vresult['autoplay'] == '1') { ?> allow="autoplay; encrypted-media" <?php } ?>
-              <?php if ($vresult['allowfs'] == '1') { ?> allowfullscreen <?php } ?>
-              
-              ></iframe>
-               <?php }  } ?>
+                  <iframe width="100%" height="250" src="https://www.youtube.com/embed/Zl_IgOiHnx4" frameborder="0" allowfullscreen></iframe>
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane" id="category">
@@ -274,9 +257,9 @@
             <select class="catgArchive">
               <option>Select Category</option>
               <option>Life styles</option>
-              <option>Sports fdg</option>
+              <option>Sports</option>
               <option>Technology</option>
-              <option>Treads dfgdfg</option>
+              <option>Treads</option>
             </select>
           </div>
         </aside>

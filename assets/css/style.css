@@ -247,10 +247,11 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 .catgArchive option{background-color:#fff; font-weight:normal; padding:5px; color:#d083cf}
 .nav-tabs > li{display:inline-block; float:none; width:32.55%}
 .nav-tabs{ text-align:center}
-.pagination > li > a, .pagination > li > span{background-color:#000; border:1px solid #000; color:#eee; margin-right:5px; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
+.pagination > li > a, .pagination > li > span{background-color:#fff; border:1px solid #ddd; color:#000; margin-right:5px; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .pagination > li > a:hover, .pagination > li > a:focus{background-color:#d083cf; color:#fff; border-color:#d083cf}
 .pagination > li:first-child > a, .pagination > li:first-child > span{border-bottom-left-radius:0; border-top-left-radius:0}
 .pagination > li:last-child > a, .pagination > li:last-child > span{border-bottom-right-radius:0; border-top-right-radius:0}
+.pagination > li.active > a, .pagination > li.active > a:hover, .pagination > li.active > a:focus{background-color:#d083cf; color:#fff; border-color:#d083cf}
 .single_page{float:left; display:inline; width:100%}
 .single_page > h1{color:#333; font-family:Oswald,arial,Georgia,serif; font-size:30px; line-height:1.4em; margin:10px 0 -10px; padding:0 0 4px; text-transform:uppercase;text-align: center;}
 .post_commentbox{display:inline; float:left; width:100%; border-top:1px solid #ddd; border-bottom:1px solid #ddd; margin-top:20px; padding:5px 0px;text-align: center;}

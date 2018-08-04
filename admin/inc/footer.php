@@ -67,6 +67,8 @@
 <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
  <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
+<!-- jQuery Validate -->
+<script type="text/javascript" src="js/jquery.validate.js"></script>
   <!-- page script -->
 <script>
   $(function () {
@@ -175,6 +177,13 @@
         $this.toggleClass("fa-star-o");
       }
     });
+
+     //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass   : 'iradio_flat-green'
+    })
+    
   });
 
 

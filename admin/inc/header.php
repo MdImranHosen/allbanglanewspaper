@@ -63,6 +63,8 @@
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="plugins/iCheck/all.css">
   <!-- bootstrap Select with serch option -->
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css">
   <!-- bootstrap wysihtml5 - text editor -->
@@ -76,6 +78,8 @@
     .menu_defarent{text-align: center;}
     .menu_defarent span{padding-right: 8px;}
     .menu_defarent span a{}
+    .webfb_defarent{text-align: center;}
+    .webfb_defarent a{padding-right: 8px;}
     .selectedStyle{cursor: pointer;border-radius: 3px;}
     .fileImage{border: 1px solid #ddd;}
     .tvchannels_style{width: 120px;height: auto;}
