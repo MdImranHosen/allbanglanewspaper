@@ -3,9 +3,10 @@ $(function(){
 		
 		var name    = $("#name").val();
 		var email   = $("#email").val();
+		var phone   = $("#phone").val();
 		var subject = $("#subject").val();
 		var message = $("#message").val();
-	 var dataString = 'name='+name+'&email='+email+'&subject='+subject+'&message='+message;
+	 var dataString = 'name='+name+'&email='+email+'&phone='+phone+'&subject='+subject+'&message='+message;
 
 	 $.ajax({
 	 	type:"POST",

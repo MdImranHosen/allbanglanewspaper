@@ -39,57 +39,7 @@
       </ul>
     </li>
     <!-- Wrold Bangla news Main Menu End.. -->
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">বাংলা কমিউনিটি  <b class="caret"></b></a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Dropdown Link 1</a></li>
-        <li><a href="#">Dropdown Link 2</a></li>
-        <li><a href="#">Dropdown Link 3</a></li>
-        <li class="dropdown dropdown-submenu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Dropdown Submenu Link 4.1</a></li>
-            <li><a href="#">Dropdown Submenu Link 4.2</a></li>
-            <li><a href="#">Dropdown Submenu Link 4.3</a></li>
-            <li><a href="#">Dropdown Submenu Link 4.4</a></li>
-          </ul>
-        </li>
-        <li class="dropdown dropdown-submenu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 5</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Dropdown Submenu Link 5.1</a></li>
-            <li><a href="#">Dropdown Submenu Link 5.2</a></li>
-            <li><a href="#">Dropdown Submenu Link 5.3</a></li>
-            <li class="divider"></li>
-            <li class="dropdown dropdown-submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Submenu Link 5.4</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Dropdown Submenu Link 5.4.1</a></li>
-                <li><a href="#">Dropdown Submenu Link 5.4.2</a></li>
-                <li class="divider"></li>
-                <li class="dropdown dropdown-submenu">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Submenu Link 5.4.3</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Dropdown Submenu Link 5.4.3.1</a></li>
-                    <li><a href="#">Dropdown Submenu Link 5.4.3.2</a></li>
-                    <li><a href="#">Dropdown Submenu Link 5.4.3.3</a></li>
-                    <li><a href="#">Dropdown Submenu Link 5.4.3.4</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Submenu Link 5.4.4</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Dropdown Submenu Link 5.4.4.1</a></li>
-                    <li><a href="#">Dropdown Submenu Link 5.4.4.2</a></li>
-                    <li><a href="#">Dropdown Submenu Link 5.4.4.3</a></li>
-                    <li><a href="#">Dropdown Submenu Link 5.4.4.4</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="bangladeshi-community.php">বাংলা কমিউনিটি </a></li>
     <li><a href="#">তথ্য প্রযুক্তি </a></li>
     <li><a href="radio.php">বাংলা রেডিও </a></li>
     <li><a href="tv.php">বাংলা টিভি</a></li>

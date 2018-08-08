@@ -65,6 +65,11 @@ class Community{
         }
       }
 
+      if ($url == '' && $fburl == '') {
+        $msg = '<div class="alert alert-danger">Website OR Facebook Must Be Enter One.</div>';
+        return $msg;
+      }else{
+
       if (strlen($name) > 120) {
       	 $msg = '<div class="alert alert-danger">Community Name Should be Lessthan 120 Characters</div>';
       	 return $msg;
@@ -90,6 +95,7 @@ class Community{
         }else{
         	$msg = '<div class="alert alert-danger">Data Not Inserted.</div>';
         	return $msg;
+         }
         }
        }
     }
@@ -337,7 +343,7 @@ class Community{
     }else{
       $v_url     = explode('/', $video_url);
     }
-    
+
     $v_ext     = end($v_url);
     $vuni_url  = 'https://www.youtube.com/embed/'.$v_ext;
 

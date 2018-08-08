@@ -6,7 +6,7 @@
 <section id="contentSection">
 <div class="row">
   <div class="col-lg-6">
-
+ <span id="state"></span>
 <form name="myform" class="well form-horizontal" action=" " method="post"  id="contact_form" novalidate="">
 <fieldset>
 
@@ -19,9 +19,9 @@
       
   <div class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-    <input  name="first_name" placeholder="Name" class="form-control"  type="text" ng-model="user.first_name" ng-required="true">
+    <input  name="name" placeholder="Name" class="form-control"  type="text" ng-model="user.name" ng-required="true" id="name" />
   </div>
-   <p ng-show="myform.first_name.$invalid && myform.first_name.$touched" class="text-danger">You must fill out your first name.</p>
+   <p ng-show="myform.name.$invalid && myform.name.$touched" class="text-danger">You must fill out your first name.</p>
   </div>
 </div>
 
@@ -31,7 +31,7 @@
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="email" ng-model="user.email" ng-required="true">
+  <input name="email" id="email" placeholder="E-Mail Address" class="form-control"  type="email" ng-model="user.email" ng-required="true">
     </div>
     <p ng-show="myform.email.$invalid && myform.email.$touched" class="text-danger">You must fill out your Email Address.</p>
   </div>
@@ -54,11 +54,11 @@
 <!-- Text input-->
       
 <div class="form-group">
-  <label class="col-md-4 control-label">Address</label>  
+  <label class="col-md-4 control-label">Subject</label>  
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="address" placeholder="Address" class="form-control" type="text" ng-model="user.address">
+  <input name="subject" id="subject" placeholder="Subject" class="form-control" type="text" ng-model="user.subject">
     </div>
   </div>
 </div>
@@ -70,7 +70,7 @@
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-          <textarea class="form-control" name="comment" placeholder="Project Description" ng-model="user.comment"></textarea>
+          <textarea class="form-control" name="message" id="message" placeholder="Project Description" ng-model="user.message"></textarea>
   </div>
   </div>
 </div>
@@ -82,7 +82,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-6">
-    <button type="submit" class="btn btn-theme" >Send <span class="glyphicon glyphicon-send"></span></button>
+    <button type="submit" id="userMessage" class="btn btn-theme" >Send <span class="glyphicon glyphicon-send"></span></button>
   </div>
 </div>
 

@@ -115,6 +115,8 @@
 <script src="assets/js/jquery.newsTicker.min.js"></script> 
 <script src="assets/js/jquery.fancybox.pack.js"></script> 
 <script src="assets/js/custom.js"></script>
+<!-- Contact us page input message from user -->
+<script type="text/javascript" src="js/contact.js"></script>
 <!-- Digital Clock Jquery -->
 <script  src="js/jquery.thooClock.js"></script> 
 <script>

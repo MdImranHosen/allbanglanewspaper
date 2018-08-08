@@ -14,9 +14,9 @@ class Contact{
 	}
   /* ajax with php data inserted system */
 
-  public function getMessageFromUser($name,$email,$subject,$message){
+  public function getMessageFromUser($name,$email,$phone,$subject,$message){
 
-  	if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+  	if (empty($name) || empty($email) || empty($phone) || empty($subject)) {
        echo '<div class="alert alert-danger" role="alert">
                 Field Must Not be Empty!
                  </div>';
@@ -24,11 +24,13 @@ class Contact{
   	  }else{
   		$name    = $this->fm->validation($name);
 	    $email   = $this->fm->validation($email);
+      $phone   = $this->fm->validation($phone);
 	    $subject = $this->fm->validation($subject);
 	    $message = $this->fm->validation($message);
 
 	    $name    = mysqli_real_escape_string($this->db->link, $name);
 	    $email   = mysqli_real_escape_string($this->db->link, $email);
+      $phone   = mysqli_real_escape_string($this->db->link, $phone);
 	    $subject = mysqli_real_escape_string($this->db->link, $subject);
 	    $message = mysqli_real_escape_string($this->db->link, $message);
 
@@ -41,14 +43,14 @@ class Contact{
               exit();
      }else{
      	$email = strtolower($email);
-     	$sql = "INSERT INTO user_message(user_name,user_email,user_subject,user_message) VALUES('$name','$email','$subject','$message')";
+     	$sql = "INSERT INTO user_message(user_name,user_email,user_phone,user_subject,user_message) VALUES('$name','$email','$phone','$subject','$message')";
      	$result = $this->db->insert($sql);
      	if ($result) {
         $messageto = "Thank You for Messaging!";
-        mail($email, "Private Detective LTD", $messageto, "pdnewsbd65@gmail.com");
+        mail($email, "All Bangla Newspaper", $messageto, "imranhossen5912@gmail.com");
 
      		echo '<div class="alert alert-success" role="alert">
-             Thank you for apply for this job. Cheeck your Email!
+             Thank you for Messaging. Cheeck your Email!
      		</div>';
      		exit();
      	}else{

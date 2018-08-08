@@ -49,8 +49,12 @@ public function validation($data){
     echo "Bangla Radio List";
   }elseif($title == ''){
     echo "Bangla All Newspaper";
+  }elseif($title == 'contact'){
+    echo "Contact Us";
+  }elseif($title == 'bangladeshi-community'){
+    echo "Bangladeshi Community List";
   }
   return $title = ucwords($title);
- }	
+ }
 
 }

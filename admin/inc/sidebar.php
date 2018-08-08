@@ -81,6 +81,8 @@
             ?>
             <li><a href="paperlist.php?paperlist=<?php echo $getfResult['catId']; ?>"><i class="fa fa-th-list"></i>Newspaper List</a></li>
             <?php } } ?>
+            <li><a href="bangla-district.php"><i class="fa fa-th"></i>
+            <span>Bangla District and Country</span></a></li>
           </ul>
         </li>
         <li>
@@ -116,13 +118,6 @@
             <a href="community-slider.php"><i class="fa fa-sliders"></i>Community Slider</a>
           </li>
         </ul>
-        </li>
-        <li>
-          <a href="bangla-district.php">
-            <i class="fa fa-th"></i>
-            <span>Bangla District and Country</span>
-            <span class="pull-right-container"></span>
-          </a>
         </li>
         <li>
           <a href="user_list.php">
