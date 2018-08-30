@@ -19,7 +19,7 @@
                         }else{ echo "0"; }  
                      ?>
                   </span></a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
+                <li><a href="sendmail.php"><i class="fa fa-envelope-o"></i> Sent</a></li>
                 <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>
                 <li><a href="#"><i class="fa fa-filter"></i> Junk <span class="label label-warning pull-right">65</span></a>
                 </li>

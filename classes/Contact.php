@@ -168,7 +168,7 @@ class Contact{
     }
     }
   }
-
+  // User Message Delete..
   public function deleteUserMessage($id){
     $sql = "DELETE FROM user_message WHERE user_id in($id)";
     $result = $this->db->delete($sql);
@@ -196,5 +196,33 @@ class Contact{
     $result = $this->db->update($sql);
     return $result;
   }
-
+   /* User Message Send Mail Number Show */
+  public function getSendMessageNumber(){
+    $sql = "SELECT * FROM send_message";
+    $result = $this->db->select($sql);
+    return $result;
+  }
+  //User Message Send to delete...
+   
+  public function deleteUserSendMessage($id){
+    $sql = "DELETE FROM send_message WHERE send_id in($id)";
+    $result = $this->db->delete($sql);
+    if ($result) {
+      $msg = '<div class="alert alert-success" role="alert">
+              Message Delete Successfully!
+            </div>';
+       return $msg;
+    }else{
+     $msg = '<div class="alert alert-danger" role="alert">
+              Message Not Deleted!
+            </div>';
+       return $msg;
+    }
+  }
+  // User send Message Select..
+  public function getContactUserSendMessageList(){
+    $sql = "SELECT * FROM send_message ORDER BY send_id DESC";
+    $result = $this->db->select($sql);
+    return $result;
+  }
 }

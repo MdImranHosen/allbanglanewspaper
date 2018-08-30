@@ -1,4 +1,4 @@
- <footer class="main-footer">
+ <footer class="main-footer" style="z-index: 1">
     <!-- Footer pdl007.com Start -->
       <div class="row">
         

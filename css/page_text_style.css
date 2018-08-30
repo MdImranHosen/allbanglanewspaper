@@ -245,6 +245,7 @@ h3.termsandconditaions_title_style {
 input.ng-invalid.ng-touched{border: 1px solid #DA3637;}
 input.ng-valid.ng-touched{border: 1px solid #509D12;}
 .ng-invalid .btn{background: gray;}
+.logo_area > a.logo > h3 > span{padding-right: 5px;}
 @media (max-width: 1340px){
 .bn_newspaper > ul > li {
 	margin-right: 15px;

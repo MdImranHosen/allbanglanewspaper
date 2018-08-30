@@ -15,8 +15,7 @@
   $bn_ns = new Bangla_news();
   $site_etc = new Site_etc();
   $con_us = new Contact();
-  
-
+  $vis_co = new Visitor();
    /* Logout Options in All Bangla News Paper */ 
     if (isset($_GET['action']) && $_GET['action'] == 'logout') {
         Session::destroy();

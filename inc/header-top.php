@@ -22,17 +22,44 @@
     <div class="col-lg-12 col-md-12 col-sm-12" style="z-index: 1;">
       <div class="header_bottom">
         <div class="logo_area"><a href="index.php" class="logo">
-          <!-- <img src="images/logo.jpg" alt=""> -->
           <h3>
             <?php
                $getSiteetc = $site_etc->getSiteEtcByIdShow();
                if ($getSiteetc) {
-                 while ($result = $getSiteetc->fetch_assoc()) {
+                 $result = $getSiteetc->fetch_assoc();
                   $site_name = $result['site_name'];
-                  $stieName = explode(' ', $site_name)
-              ?>
-            <span style="color:green;"><?php echo $stieName[0]; ?> </span> <span style="color: red;"> <?php echo $stieName[1]; ?> </span> <span style="color: green;"> <?php echo $stieName[2]; ?></span>
-          <?php } } ?>
+                  $site_nameword = str_word_count($site_name);
+
+                  if ($site_nameword == 1) {
+                    echo '<span style="color:#D088CA">'.$site_name.'</span>';
+                  }elseif($site_nameword == 2){
+                    if (strpos($site_name, ".") !== false) {
+                      echo '<span style="color:#D088CA">'.$site_name.'</span>';
+                    }else{
+                      $stieNameWords = explode(' ', $site_name);
+                    echo '<span style="color:#D088CA">'.$stieNameWords[0].'</span><span style="color:#000000">'.$stieNameWords[1].'</span>';
+                    }
+                    
+
+                  }elseif($site_nameword == 3){
+                    if (strpos($site_name, ".") !== false) {
+                      echo '<span style="color:#D088CA">'.$site_name.'</span>';
+                    }else{
+                     $stieNameWords = explode(' ', $site_name);
+                    echo '<span style="color:#D088CA">'.$stieNameWords[0].'</span><span style="color:#000000">'.$stieNameWords[1].'</span><span style="color:#D088CA">'.$stieNameWords[2].'</span>'; 
+                    }
+                    
+                  }elseif($site_nameword == 4){
+                    if (strpos($site_name, ".") !== false) {
+                      echo '<span style="color:#D088CA">'.$site_name.'</span>';
+                    }else{
+                    $stieNameWords = explode(' ', $site_name);
+                    echo '<span style="color:#D088CA">'.$stieNameWords[0].'</span><span style="color:#000000">'.$stieNameWords[1].'</span><span style="color:#D088CA">'.$stieNameWords[2].'</span><span style="color:#000000">'.$stieNameWords[3].'</span>';
+                    }
+                    
+                  }else{ echo "Your Site Name";}
+                  
+                } ?>
           </h3>
         </a></div>
         <div class="add_banner">

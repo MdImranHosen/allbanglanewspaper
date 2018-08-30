@@ -265,8 +265,8 @@ class Community{
     $sql = "UPDATE community_settings SET
                     record_per_page = '$per_page',
                     order_by        = '$order_by',
-                    asc_desc        = '$asc_desc',
-                    com_setting_Id  = '$com_id'";
+                    asc_desc        = '$asc_desc'
+                   WHERE com_setting_Id  = '$com_id'";
     $result = $this->db->update($sql);
     if ($result) {
       $msg = '<div class="alert alert-success">Update Successfully!</div>';

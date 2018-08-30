@@ -6,10 +6,10 @@ include_once ($filepath.'/../helpers/Format.php');
 * Show_news Class....
 */
 class Show_news{
- private $db;
- private $fm;
+    private $db;
+    private $fm;
 	
- public function __construct(){
+    public function __construct(){
 		$this->db = new Database();
 		$this->fm = new Format();
 	}

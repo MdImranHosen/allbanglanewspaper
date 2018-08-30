@@ -5,7 +5,7 @@
         <div class="latest_newsarea">
         <div class="col-lg-10 col-sm-12" style="z-index: 1;">
          <span>জনপ্রিয় সংবাদপত্র</span>
-          <ul id="ticker01" class="news_sticker">
+          <ul id="ticker01" class="news_sticker" style="max-height: 30px;overflow: hidden;">
             <?php
                  $getMqNews = $populer_news->getPopulerNewsPaper();
                  if ($getMqNews) {
@@ -19,11 +19,17 @@
           <div class="col-lg-2" style="z-index: 1;">
           <div class="social_area">
             <ul class="social_nav">
-              <li class="facebook"><a href="#"></a></li>
-              <li class="twitter"><a href="#"></a></li>
-              <li class="googleplus"><a href="#"></a></li>
-              <li class="youtube"><a href="#"></a></li>
-              <li class="mail"><a href="#"></a></li>
+             <?php
+             $getSocailm = $socail->getSocailMediaByIdShow();
+             if ($getSocailm) {
+             while ($result = $getSocailm->fetch_assoc()) {
+             ?>
+              <li class="facebook"><a href="<?php echo $result['bn_ns_fb']; ?>"></a></li>
+              <li class="twitter"><a href="<?php echo $result['bn_ns_tw']; ?>"></a></li>
+              <li class="googleplus"><a href="<?php echo $result['bn_ns_gp']; ?>"></a></li>
+              <li class="youtube"><a href="<?php echo $result['bn_ns_yt']; ?>"></a></li>
+              <li class="pinterest"><a href="<?php echo $result['bn_ns_ps']; ?>"></a></li>
+             <?php } } ?>
             </ul>
           </div>
          </div>
@@ -32,11 +38,17 @@
         <div class="col-lg-12" style="z-index: 1;">
           <div class="social_area_sm">
             <ul class="social_nav">
-              <li class="facebook"><a href="#"></a></li>
-              <li class="twitter"><a href="#"></a></li>
-              <li class="googleplus"><a href="#"></a></li>
-              <li class="youtube"><a href="#"></a></li>
-              <li class="mail"><a href="#"></a></li>
+            <?php
+             $getSocailm = $socail->getSocailMediaByIdShow();
+             if ($getSocailm) {
+             while ($result = $getSocailm->fetch_assoc()) {
+             ?>
+              <li class="facebook"><a href="<?php echo $result['bn_ns_fb']; ?>"></a></li>
+              <li class="twitter"><a href="<?php echo $result['bn_ns_tw']; ?>"></a></li>
+              <li class="googleplus"><a href="<?php echo $result['bn_ns_gp']; ?>"></a></li>
+              <li class="youtube"><a href="<?php echo $result['bn_ns_yt']; ?>"></a></li>
+              <li class="pinterest"><a href="<?php echo $result['bn_ns_ps']; ?>"></a></li>
+             <?php } } ?>
             </ul>
           </div> 
         </div>

@@ -80,11 +80,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['site_etc'])) {
                 </div>
                 <div class="form-group">
                   <label>Developer Name: </label>
-                 <input type="text" class="form-control" name="developer_name" value="<?php echo $result['developer_name']; ?>" />
+                 <input readonly="" type="text" class="form-control" name="developer_name" value="<?php echo $result['developer_name']; ?>" />
                 </div>
                 <div class="form-group">
                   <label>Developer Site url: </label>
-                 <input type="text" class="form-control" name="developer_surl" value="<?php echo $result['developer_surl']; ?>" />
+                 <input readonly="" type="text" class="form-control" name="developer_surl" value="<?php echo $result['developer_surl']; ?>" />
                 </div>
             <div class="box-footer">
               <button type="submit" name="site_etc" class="center-block pull-center btn btn-success">Update</button>

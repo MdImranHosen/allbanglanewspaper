@@ -217,7 +217,7 @@
 
     });
  </script>-->
- <script type="text/javascript" src="js/user_mailbox.js"></script>
+<script type="text/javascript" src="js/user_mailbox.js"></script>
 <script type="text/javascript" src="js/search_mail.js"></script>
  <script type="text/javascript">
 function googleTranslateElementInit() {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 28, 2018 at 05:10 AM
+-- Generation Time: Aug 30, 2018 at 04:51 AM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -21,6 +21,52 @@ SET time_zone = "+00:00";
 --
 -- Database: `allbangla`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bd_community`
+--
+
+DROP TABLE IF EXISTS `bd_community`;
+CREATE TABLE IF NOT EXISTS `bd_community` (
+  `comyId` int(11) NOT NULL AUTO_INCREMENT,
+  `com_name` varchar(255) DEFAULT NULL,
+  `com_location` varchar(255) DEFAULT NULL,
+  `com_url` varchar(255) DEFAULT NULL,
+  `fb_url` varchar(255) DEFAULT NULL,
+  `com_popular` int(11) DEFAULT NULL,
+  `com_level` int(11) DEFAULT NULL,
+  `date_time` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`comyId`)
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bd_community`
+--
+
+INSERT INTO `bd_community` (`comyId`, `com_name`, `com_location`, `com_url`, `fb_url`, `com_popular`, `com_level`, `date_time`) VALUES
+(4, 'Bangladeshi Community in Austria', 'Austria', '', 'https://www.facebook.com/Bangladeshi-Community-in-Austria-1031244130241705/', 2, 2, NULL),
+(2, 'Bangla Community of China', 'China', 'http://www.banglachina.com', '', 2, 1, NULL),
+(5, 'Bangladeshi Canadian Community Services - BCS', 'Canada', 'https://www.bangladeshi.ca', 'https://www.facebook.com/bdcanadaservices', 2, 1, NULL),
+(6, 'Bangladeshi expats in Canada | InterNations', 'Canada', 'https://www.internations.org/canada-expats/bangladeshis', NULL, 2, 1, NULL),
+(7, 'Bangladesh Canada Association of Edmonton', 'Canada', 'https://www.bcae.ca', 'https://www.facebook.com/bcae1/', 1, 1, NULL),
+(8, 'National Bangladeshi-Canadian Council', 'Canada', 'http://www.nbcac.org', NULL, 1, 2, NULL),
+(9, 'Bangladesh Students Association (AUSTRALIA)', 'Australia', 'https://www.facebook.com/Bangladesh-Students-Association-AUSTRALIA-156732514413642/', NULL, 2, 1, NULL),
+(10, 'South Australian Bangladeshi Community Association', 'Australia', 'http://sabca.org.au/main/index.php', 'https://www.facebook.com/South-Australian-Bangladeshi-Community-Association-135063016541664/', 2, 1, NULL),
+(11, 'Bangladeshi expatriates in Austria', 'Austria', 'http://www.expat.com/en/network/bangladeshi/in/2018-austria/', 'https://www.facebook.com/expat.blog', 1, 2, NULL),
+(12, 'BAAWA: Bangladesh Australia Association of Western Australia', 'Australia', 'http://www.baawa.org.au', 'https://www.facebook.com/baawaperth/', 1, 1, NULL),
+(13, 'Community Information Summary', 'Australia', 'https://www.dss.gov.au/sites/default/files/documents/02_2014/bangladesh.pdf', '', 1, 2, NULL),
+(14, 'Bangladesh Association in Brisbane ( BAB )', 'Australia', 'http://www.bab.org.au', 'https://www.facebook.com/Bangladeshassociationinbrisbane/', 2, 2, NULL),
+(15, 'Bangla Academy Australia', 'Australia', 'http://www.banglaacademy.com/cms/', 'https://www.facebook.com/BanglaAcademyAustralia', 1, 2, NULL),
+(16, 'Bangladesh Society of Sydney Inc. (BDSS)', 'Sydney, Australia', 'http://www.bdss.org.au', '', 2, 2, NULL),
+(17, 'Bangladeshi Student Club in Germany', 'Germany', '', 'https://www.facebook.com/Bangladeshi-Student-Club-in-Germany-338364301738/', 1, 2, NULL),
+(18, 'Bangladeshi Student Association Kiel, Germany', 'Germany', '', 'https://www.facebook.com/Bangladeshi-Student-Association-Kiel-Germany-1624469867788304/', 1, 2, NULL),
+(19, 'Bangladeshi Students Association in Japan', 'Japan', '', 'https://www.facebook.com/bdstudentsinjp/', 2, 2, NULL),
+(20, 'Japan Bangladesh Society', 'Japan', 'http://japanbangladesh.com/en/', '', 1, 1, NULL),
+(22, 'Bangladeshi Students in China', 'China', '', 'https://www.facebook.com/bdstudentscn/', 2, 2, NULL),
+(23, 'ChinaBangla.net', 'China', 'http://www.chinabangla.net', '', 1, 2, NULL),
+(27, 'Bangladeshi Students in China', 'China', 'http://www.chinabangla.net', 'https://www.facebook.com/bdstudentscn/', 1, 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -264,6 +310,53 @@ INSERT INTO `category` (`catId`, `category`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `community_settings`
+--
+
+DROP TABLE IF EXISTS `community_settings`;
+CREATE TABLE IF NOT EXISTS `community_settings` (
+  `com_setting_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `record_per_page` int(11) DEFAULT NULL,
+  `order_by` varchar(100) DEFAULT NULL,
+  `asc_desc` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`com_setting_Id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `community_settings`
+--
+
+INSERT INTO `community_settings` (`com_setting_Id`, `record_per_page`, `order_by`, `asc_desc`) VALUES
+(1, 9, 'comyId', 'DESC');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `community_video`
+--
+
+DROP TABLE IF EXISTS `community_video`;
+CREATE TABLE IF NOT EXISTS `community_video` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `com_v_title` varchar(255) DEFAULT NULL,
+  `com_yt_url` varchar(255) DEFAULT NULL,
+  `video_height` varchar(50) DEFAULT NULL,
+  `video_width` varchar(50) DEFAULT NULL,
+  `allowfs` varchar(5) DEFAULT NULL,
+  `autoplay` varchar(5) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `community_video`
+--
+
+INSERT INTO `community_video` (`id`, `com_v_title`, `com_yt_url`, `video_height`, `video_width`, `allowfs`, `autoplay`) VALUES
+(1, 'This is Community First Video', 'https://www.youtube.com/embed/UxB11eAl-YE', '350', '100%', '1', '1');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pdl_social`
 --
 
@@ -333,15 +426,17 @@ CREATE TABLE IF NOT EXISTS `send_message` (
   `mail_subject` varchar(255) DEFAULT NULL,
   `mail_message` text,
   `mail_date` varchar(50) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`send_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `send_message`
 --
 
-INSERT INTO `send_message` (`send_id`, `to_mail`, `from_mail`, `mail_subject`, `mail_message`, `mail_date`) VALUES
-(1, 'imran@gmail.com', 'allamin@gmail.com', 'Hello All amin', 'cvvbcbcvb', 'Thursday 19th of July 2018 01:51:47 PM');
+INSERT INTO `send_message` (`send_id`, `to_mail`, `from_mail`, `mail_subject`, `mail_message`, `mail_date`, `status`) VALUES
+(1, 'imran@gmail.com', 'allamin@gmail.com', 'Hello All amin', 'cvvbcbcvb', 'Thursday 19th of July 2018 01:51:47 PM', 0),
+(2, 'imran@gmail.com', 'imran@mailinfo.com', 'Check Send Email', 'Check this mail of Web site storge', 'Wednesday 15th of August 2018 06:21:34 PM', 0);
 
 -- --------------------------------------------------------
 
@@ -365,7 +460,7 @@ CREATE TABLE IF NOT EXISTS `site_about_address` (
 --
 
 INSERT INTO `site_about_address` (`ste_id`, `s_ads`, `s_phone`, `s_email`, `ws_u`, `s_about`) VALUES
-(1, '30/ A à¦¨à§Ÿà¦¾ à¦ªà¦²à§à¦Ÿà¦¨, Dhaka 1000', '1713553800', 'info@allbanglanews.com', 'http://www.pdnewsbd.com', '<p>www.allbanglanews.com à¦“à¦¯à¦¼à§‡à¦¬à¦¸à¦¾à¦‡à¦Ÿ à¦ à¦¬à¦¾à¦‚à¦²à¦¾à¦¦à§‡à¦¶à§‡à¦° à¦¸à¦•à¦² à¦œà§‡à¦²à¦¾à¦° à¦¬à¦¾à¦‚à¦²à¦¾ à¦¨à¦¿à¦‰à¦œ à¦ªà§‡à¦ªà¦¾à¦° à¦¸à¦¾à¦‡à¦Ÿ à¦—à§à¦²à§‹ à¦“ à¦°à§‡à¦¡à¦¿à¦“ à¦Ÿà§‡à¦²à¦¿à¦­à¦¶à¦¨ à¦šà§à¦¯à¦¾à¦¨à§‡à¦² à¦¯à§‹à¦— à¦•à¦°à¦¾ à¦¹à§Ÿà§‡à¦›à§‡ à¥¤ à¦à¦›à¦¾à§œà¦¾ à¦¬à¦¿à¦­à¦¿à¦¨à§à¦¨ à¦¦à§‡à¦¶à§‡ à¦¯à§‡à¦¸à¦¬ à¦¬à¦¾à¦‚à¦²à¦¾ à¦¨à¦¿à¦‰à¦œ à¦ªà§‡à¦ªà¦¾à¦° à¦à¦¬à¦‚ à¦¬à¦¾à¦‚à¦²à¦¾ à¦°à§‡à¦¡à¦¿à¦“ à¦Ÿà¦¿à¦­à¦¿ à¦à¦° à¦“à§Ÿà§‡à¦¬à¦¸à¦¾à¦‡à¦Ÿ à¦¯à§‹à¦— à¦•à¦°à¦¾ à¦¹à§Ÿà§‡à¦›à§‡à¥¤ à¦°à§‡à¦¡à¦¿à¦“ à¦²à¦¾à¦‡à¦­ à¦¶à§‹à¦¨à¦¤à§‡ à¦ªà¦¾à¦°à¦¬à§‡à¦¨à¥¤</p>');
+(1, '30/ A à¦¨à§Ÿà¦¾ à¦ªà¦²à§à¦Ÿà¦¨, Dhaka 1000', '01983912645', 'info@allbanglanews.com', 'http://www.pdnewsbd.com', '<p>www.allbanglanews.com à¦“à¦¯à¦¼à§‡à¦¬à¦¸à¦¾à¦‡à¦Ÿ à¦ à¦¬à¦¾à¦‚à¦²à¦¾à¦¦à§‡à¦¶à§‡à¦° à¦¸à¦•à¦² à¦œà§‡à¦²à¦¾à¦° à¦¬à¦¾à¦‚à¦²à¦¾ à¦¨à¦¿à¦‰à¦œ à¦ªà§‡à¦ªà¦¾à¦° à¦¸à¦¾à¦‡à¦Ÿ à¦—à§à¦²à§‹ à¦“ à¦°à§‡à¦¡à¦¿à¦“ à¦Ÿà§‡à¦²à¦¿à¦­à¦¶à¦¨ à¦šà§à¦¯à¦¾à¦¨à§‡à¦² à¦¯à§‹à¦— à¦•à¦°à¦¾ à¦¹à§Ÿà§‡à¦›à§‡ à¥¤ à¦à¦›à¦¾à§œà¦¾ à¦¬à¦¿à¦­à¦¿à¦¨à§à¦¨ à¦¦à§‡à¦¶à§‡ à¦¯à§‡à¦¸à¦¬ à¦¬à¦¾à¦‚à¦²à¦¾ à¦¨à¦¿à¦‰à¦œ à¦ªà§‡à¦ªà¦¾à¦° à¦à¦¬à¦‚ à¦¬à¦¾à¦‚à¦²à¦¾ à¦°à§‡à¦¡à¦¿à¦“ à¦Ÿà¦¿à¦­à¦¿ à¦à¦° à¦“à§Ÿà§‡à¦¬à¦¸à¦¾à¦‡à¦Ÿ à¦¯à§‹à¦— à¦•à¦°à¦¾ à¦¹à§Ÿà§‡à¦›à§‡à¥¤ à¦°à§‡à¦¡à¦¿à¦“ à¦²à¦¾à¦‡à¦­ à¦¶à§‹à¦¨à¦¤à§‡ à¦ªà¦¾à¦°à¦¬à§‡à¦¨à¥¤</p>');
 
 -- --------------------------------------------------------
 
@@ -391,6 +486,31 @@ CREATE TABLE IF NOT EXISTS `site_etc` (
 
 INSERT INTO `site_etc` (`ste_id`, `site_name`, `browser_icon`, `copyright_text`, `copyright_surl`, `developer_name`, `developer_surl`) VALUES
 (1, 'ALL BANGLA NEWSPAPER', 'images/icon/icon.png', 'Tech Group', 'http://www.techgroup.co/', 'Md. Imran Hosen', 'http://www.fb.com/Md.ImranHosen.up');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `slider_img`
+--
+
+DROP TABLE IF EXISTS `slider_img`;
+CREATE TABLE IF NOT EXISTS `slider_img` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `slider_image` varchar(255) DEFAULT NULL,
+  `title_text` varchar(255) DEFAULT NULL,
+  `body_text` varchar(255) DEFAULT NULL,
+  `height` varchar(20) DEFAULT NULL,
+  `width` varchar(20) DEFAULT NULL,
+  `date_time` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `slider_img`
+--
+
+INSERT INTO `slider_img` (`id`, `slider_image`, `title_text`, `body_text`, `height`, `width`, `date_time`) VALUES
+(1, 'slider.png', 'Slider Title', 'Slider Body Text', '370', '660', NULL);
 
 -- --------------------------------------------------------
 
@@ -431,7 +551,7 @@ CREATE TABLE IF NOT EXISTS `tbl_menu` (
   `tbl_url` varchar(555) NOT NULL,
   `menu_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=79 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_menu`
@@ -450,7 +570,8 @@ INSERT INTO `tbl_menu` (`id`, `name`, `tbl_url`, `menu_id`) VALUES
 (22, 'Indian Bangla', 'https://www.indianbangla.com', 15),
 (23, 'Chinies Bangla news', 'https://www.chinabanglanews.com/index.php?action&amp;id=78', 15),
 (57, 'java', 'java.php', 0),
-(77, 'à¦°à¦¾à¦œà¦¨à§€à¦¤à¦¿', '#', 0);
+(77, 'à¦°à¦¾à¦œà¦¨à§€à¦¤à¦¿', '#', 0),
+(78, 'Newspaper', '#', 0);
 
 -- --------------------------------------------------------
 
@@ -582,13 +703,120 @@ CREATE TABLE IF NOT EXISTS `user_message` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(255) DEFAULT NULL,
   `user_email` varchar(255) DEFAULT NULL,
+  `user_phone` varchar(20) DEFAULT NULL,
   `user_subject` text,
   `user_message` text,
   `status` int(11) NOT NULL DEFAULT '0',
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_ip` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_message`
+--
+
+INSERT INTO `user_message` (`user_id`, `user_name`, `user_email`, `user_phone`, `user_subject`, `user_message`, `status`, `date`, `user_ip`) VALUES
+(26, 'imran', 'imran@gmail.com', 'undefined', 'Meghalaya', 'Bhutan', 1, '2018-08-08 04:02:39', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visitors`
+--
+
+DROP TABLE IF EXISTS `visitors`;
+CREATE TABLE IF NOT EXISTS `visitors` (
+  `unique_vid` int(11) NOT NULL AUTO_INCREMENT,
+  `ip` varchar(50) DEFAULT NULL,
+  `datet` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`unique_vid`)
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `visitors`
+--
+
+INSERT INTO `visitors` (`unique_vid`, `ip`, `datet`) VALUES
+(23, '127.0.0.1', '2018-08-15'),
+(11, '103.239.255.180', '2018-08-13'),
+(19, '103.239.255.181', '2018-08-15'),
+(17, '::1', '2018-08-14'),
+(20, '103.239.255.182', '2018-08-16'),
+(21, '103.239.255.183', '2018-08-10'),
+(22, '103.239.255.184', '2018-08-10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visitors_details`
+--
+
+DROP TABLE IF EXISTS `visitors_details`;
+CREATE TABLE IF NOT EXISTS `visitors_details` (
+  `idvisitor` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) DEFAULT NULL,
+  `pagename` varchar(255) DEFAULT NULL,
+  `date_time` varchar(100) DEFAULT NULL,
+  `views` varchar(255) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`idvisitor`)
+) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `visitors_details`
+--
+
+INSERT INTO `visitors_details` (`idvisitor`, `id`, `pagename`, `date_time`, `views`) VALUES
+(52, 23, 'http://127.0.0.1/newsfeed/index.php', '2018-08-19 05:32:23', '1'),
+(51, 17, 'http://localhost/newsfeed/bangladeshi-community.php', '2018-08-19 03:50:19', '1'),
+(16, 17, 'http://localhost/newsfeed/index.php', '2018-08-14 07:52:30', '1'),
+(50, 23, 'http://127.0.0.1/newsfeed/newspaper.php?paperlist=132', '2018-08-19 03:50:19', '1'),
+(49, 17, 'http://localhost/newsfeed/bangladeshi-community.php', '2018-08-16 03:52:09', '1'),
+(48, 23, 'http://127.0.0.1/newsfeed/newspaper.php?paperlist=132', '2018-08-16 03:52:09', '1'),
+(27, 17, 'http://localhost/newsfeed/index.php', '2018-08-14 13:25:27', '1'),
+(28, 17, 'http://localhost/newsfeed/bangladeshi-community.php', '2018-08-14 13:25:29', '1'),
+(29, 17, 'http://localhost/newsfeed/radio.php', '2018-08-14 13:25:31', '1'),
+(30, 17, 'http://localhost/newsfeed/tv.php', '2018-08-14 13:25:33', '1'),
+(31, 17, 'http://localhost/newsfeed/tv.php', '2018-08-14 13:25:36', '1'),
+(53, 17, 'http://localhost/newsfeed/radio.php', '2018-08-19 07:02:36', '1'),
+(33, 17, 'http://localhost/newsfeed/tv.php', '2018-08-15 04:11:36', '1'),
+(47, 23, 'http://127.0.0.1/newsfeed/newspaper.php?paperlist=132', '2018-08-15 11:44:58', '1'),
+(38, 17, 'http://localhost/newsfeed/bangladeshi-community.php', '2018-08-15 10:16:55', '1'),
+(46, 23, 'http://127.0.0.1/newsfeed/tv.php', '2018-08-15 11:44:46', '1'),
+(54, 23, 'http://127.0.0.1/newsfeed/index.php', '2018-08-19 07:14:21', '1'),
+(55, 23, 'http://127.0.0.1/newsfeed/bangladeshi-community.php', '2018-08-19 07:14:25', '1'),
+(56, 17, 'http://localhost/newsfeed/tv.php', '2018-08-19 07:44:45', '1'),
+(57, 17, 'http://localhost/newsfeed/bangladeshi-community.php', '2018-08-19 07:45:28', '1'),
+(58, 17, 'http://localhost/newsfeed/bangladeshi-community.php?page=4', '2018-08-19 07:45:34', '1'),
+(59, 17, 'http://localhost/newsfeed/bangladeshi-community.php?page=2', '2018-08-19 07:45:38', '1'),
+(60, 23, 'http://127.0.0.1/newsfeed/bangladeshi-community.php', '2018-08-19 07:46:03', '1'),
+(61, 23, 'http://127.0.0.1/newsfeed/index.php', '2018-08-19 07:50:22', '1'),
+(62, 23, 'http://127.0.0.1/newsfeed/bangladeshi-community.php', '2018-08-19 07:50:29', '1'),
+(63, 23, 'http://127.0.0.1/newsfeed/bangladeshi-community.php', '2018-08-20 03:58:01', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visitor_setting`
+--
+
+DROP TABLE IF EXISTS `visitor_setting`;
+CREATE TABLE IF NOT EXISTS `visitor_setting` (
+  `visitor_setting_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `record_per_page` varchar(30) DEFAULT NULL,
+  `order_by` varchar(100) NOT NULL,
+  `pageViewId` varchar(100) NOT NULL,
+  `asc_desc` varchar(50) NOT NULL,
+  PRIMARY KEY (`visitor_setting_Id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `visitor_setting`
+--
+
+INSERT INTO `visitor_setting` (`visitor_setting_Id`, `record_per_page`, `order_by`, `pageViewId`, `asc_desc`) VALUES
+(1, '3', 'ip', '', 'DESC'),
+(2, '3', 'idvisitor', '23', 'DESC');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

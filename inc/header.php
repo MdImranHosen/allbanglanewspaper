@@ -9,6 +9,7 @@ include "classes/Meta_title.php";
 include "classes/Socail.php";
 include "classes/Site_etc.php";
 include "classes/About_address.php";
+include "classes/Community.php";
 
  $db = new Database();
  $fm = new Format();
@@ -18,11 +19,12 @@ include "classes/About_address.php";
  $socail = new Socail();
  $site_etc = new Site_etc();
  $about_address = new About_address();
+ $comm = new Community();
 
  //Cache Remove Code Start....
 header("Cache-Control: no-store, no-cache, must-revalidate"); 
 header("Cache-Control: pre-check=0, post-check=0, max-age=0"); 
-header("Pragma: no-cache"); 
+header("Pragma: no-cache");
 header("Expires: Mon, 6 Dec 1977 00:00:00 GMT"); 
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 ?>
@@ -32,6 +34,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 <?php 
 include "script/title.php";
 include "script/meta.php";
+include "unique_visitor.php";
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
@@ -55,5 +58,14 @@ include "script/meta.php";
 <script src="assets/js/respond.min.js"></script>
 <![endif]-->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Serif:400,700|Doid+Sans+Mono' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124254584-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124254584-1');
+</script>
 </head>
 <body>

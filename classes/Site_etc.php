@@ -4,8 +4,8 @@
  */
 class Site_etc{
 	
-	private $db;
-	private $fm;
+	protected $db;
+	protected $fm;
 
 	public function __construct()
 	{
@@ -17,12 +17,16 @@ class Site_etc{
 		$result = $this->db->select($sql);
 		return $result;
 	}
+	
 	public function getSiteEtc($data, $file){
 		if (empty($data['site_name']) || empty($data['copyright_text']) || empty($data['developer_name'])) {
 		  $msg = '<div class="alert alert-danger">Field must not be Empty!</div>';
 		  return $msg;
 		}elseif(strlen($data['site_name']) > 100){
            $msg = '<div class="alert alert-danger">Website name Should be Less than 100 Characters.</div>';
+           return $msg;
+		 }elseif(str_word_count($data['site_name']) > 4){
+           $msg = '<div class="alert alert-danger">Website Name Allow Only 4 word.</div>';
            return $msg;
 		 }elseif(strlen($data['copyright_text']) > 100){
            $msg = '<div class="alert alert-danger">Copyright Text Should be Less than 100 Characters.</div>';
@@ -127,7 +131,7 @@ class Site_etc{
 			 	  return $msg;
 			 	}else{
                   
-                  $updateSql = "UPDATE site_etc SET 
+                  $updateSql = "UPDATE site_etc SET
                                 site_name      = '$site_name',
                                 copyright_text = '$copyright_text',
                                 copyright_surl = '$copyright_surl',
@@ -149,3 +153,4 @@ class Site_etc{
 
 	}
 }
+include "Visitor.php";

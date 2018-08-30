@@ -1,7 +1,8 @@
 <?php include "inc/header.php" ?>
 <?php include "inc/header-top.php" ?>
-<?php /*include "inc/news_mq_s.php"*/ ?>
+<?php include "inc/news_mq_s.php" ?>
 <?php include "inc/menu.php" ?>
+<?php include "inc/slider-community.php" ?>
  <section id="contentSection">
     <div class="row">
       <div class="col-lg-8 col-md-7" style="z-index: 1;">
